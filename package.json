@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "webpack-dev-server --open",
     "build": "webpack",
     "watch": "webpack -w"
   },
@@ -11,10 +12,12 @@
     "three": "^0.120.1"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
     "prettier": "^2.1.1",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }

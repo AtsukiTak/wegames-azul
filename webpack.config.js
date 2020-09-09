@@ -1,9 +1,12 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   mode: "development",
   entry: "./src/index.ts",
   output: {
     path: `${__dirname}/dist`,
-    filename: "main.js"
+    publicPath: "/",
+    filename: "main.js",
   },
   module: {
     rules: [
@@ -16,4 +19,12 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      hash: true,
+    }),
+  ],
+  devServer: {
+    contentBase: `${__dirname}/dist`,
+  }
 };
